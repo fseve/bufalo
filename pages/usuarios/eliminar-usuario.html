@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="../../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="../../plugins/toastr/toastr.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
@@ -121,95 +125,49 @@
     </div>
   </aside>
 
+  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1></h1>
+            <h1>
+              Mostrar alerta para eliminar usuario
+              <!-- <small>new</small> -->
+            </h1>
           </div>
           <!-- <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Blank Page</li>
+              <li class="breadcrumb-item active">Modals & Alerts</li>
             </ol>
           </div> -->
         </div>
-      </div>
+      </div><!-- /.container-fluid -->
     </section>
 
+    <!-- Main content -->
     <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
 
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title"></h3>
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-          </div>
-        </div>
-        <div class="card-body">
-
-          <div class="card card-primary">
-            <div class="card-header">
-              <h3 class="card-title">Generar retroalimentación</h3>
-            </div>
-            <form>
+            <div class="card card-success card-outline">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-edit"></i>
+                  Ejemplo de alerta
+                </h3>
+              </div>
               <div class="card-body">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="id">ID</label>
-                      <input type="text" class="form-control" id="id" value="183" readonly placeholder="">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="correoElectronico">Correo electrónico</label>
-                      <input type="email" class="form-control" id="correoElectronico" value="johndoe@mail.com" readonly placeholder="">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="nombres">Nombres</label>
-                      <input type="text" class="form-control" id="nombres" value="John" readonly placeholder="">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="apellidos">Apellidos</label>
-                      <input type="text" class="form-control" id="apellidos" value="Doe" readonly placeholder="">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="puntaje">Puntaje</label>
-                      <input type="number" class="form-control" id="puntaje" min="0" max="100" value="85" placeholder="">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="comentarios">Comentarios</label>
-                      <textarea cols="30" rows="5" class="form-control" id="comentarios" placeholder="">Ha realizado un desempeño sobresaliente.</textarea>
-                    </div>
-                  </div>
-                </div>
-
+                <button type="button" class="btn btn-danger swalDefaultDanger">
+                  Eliminar usuario
+                </button>
               </div>
+            </div>
 
-              <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Guardar</button>
-              </div>
-            </form>
           </div>
-
         </div>
       </div>
 
@@ -231,9 +189,40 @@
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- SweetAlert2 -->
+<script src="../../plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- Toastr -->
+<script src="../../plugins/toastr/toastr.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function() {
+
+    $('.swalDefaultDanger').click(function() {
+      Swal.fire({
+        title: '¿Desea eliminar este usuario?',
+        text: "Esta acción no se puede deshacer",
+        icon: 'warning',
+        confirmButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar',
+        showCancelButton: true,
+        cancelButtonColor: '#3085d6',
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            '¡Eliminado!',
+            'El usuario ha sido eliminado correctamente.',
+            'success'
+          )
+        }
+      })
+    });
+
+  });
+</script>
 </body>
 </html>
