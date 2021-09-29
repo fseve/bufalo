@@ -395,8 +395,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Tables
@@ -405,7 +405,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../tables/simple.html" class="nav-link active">
+                <a href="../tables/simple.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Simple Tables</p>
                 </a>
@@ -550,8 +550,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
                 Extras
@@ -666,7 +666,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../examples/blank.html" class="nav-link">
+                <a href="../examples/blank.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Blank Page</p>
                 </a>
@@ -809,12 +809,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Listar Usuarios</h1>
+            <h1>Blank Page</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Simple Tables</li>
+              <li class="breadcrumb-item active">Blank Page</li>
             </ol>
           </div>
         </div>
@@ -822,134 +822,154 @@
     </section>
 
     <section class="content">
-      <div class="container-fluid">
 
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title"></h3>
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title"></h3>
 
-                <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="Buscar usuario">
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
 
-                    <div class="input-group-append">
-                      <button type="submit" class="btn btn-default">
-                        <i class="fas fa-search"></i>
-                      </button>
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Perfil de usuario</h3>
+            </div>
+            <form>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="id">ID</label>
+                      <input type="text" class="form-control" id="id" value="183" readonly placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="correoElectronico">Correo electrónico</label>
+                      <input type="email" class="form-control" id="correoElectronico" value="johndoe@mail.com" readonly placeholder="">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="nombres">Nombres</label>
+                      <input type="text" class="form-control" id="nombres" value="John" readonly placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="apellidos">Apellidos</label>
+                      <input type="text" class="form-control" id="apellidos" value="Doe" readonly placeholder="">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="edad">Edad</label>
+                      <input type="number" class="form-control" id="edad" min="18" value="30" readonly placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="genero">Género</label>
+                      <select class="form-control" name="genero" id="genero" readonly>
+                        <option value="seleccionar">Seleccionar</option>
+                        <option value="masculino" selected>Masculino</option>
+                        <option value="femenino">Femenino</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="cargo">Cargo</label>
+                      <input type="text" class="form-control" id="cargo" value="Gerente" readonly placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="fechaIngreso">Fecha de ingreso</label>
+                      <input type="date" class="form-control" id="fechaIngreso" value="2021-09-20" readonly placeholder="">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="tipoContrato">Tipo de Contrato</label>
+                      <input type="text" class="form-control" id="tipoContrato" value="Contrato a término fijo" readonly placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="fechaTerminoContrato">Fecha término contrato</label>
+                      <input type="date" class="form-control" id="fechaTerminoContrato" value="2021-11-30" readonly placeholder="">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="dependencia">Dependencia</label>
+                      <input type="text" class="form-control" id="dependencia" value="Talento Humano" readonly placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="salario">Salario</label>
+                      <input type="number" class="form-control" id="salario" min="0" value="1500000" readonly placeholder="">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="rol">Rol</label>
+                      <select class="form-control" name="rol" id="rol" readonly>
+                        <option value="seleccionar">Seleccionar</option>
+                        <option value="usuarioFinal" selected>Usuario final</option>
+                        <option value="administrador">Administrador</option>
+                        <option value="superAdministrador">SuperAdministrador</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="puntaje">Puntaje</label>
+                      <input type="number" class="form-control" id="puntaje" min="0" max="100" value="85" readonly placeholder="">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="comentarios">Comentarios</label>
+                      <textarea cols="30" rows="5" class="form-control" id="comentarios" readonly placeholder="">Ha realizado un desempeño sobresaliente.</textarea>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- /.card-header -->
-              <div class="card-body table-responsive p-0">
-                <table class="table table-hover text-nowrap">
-                  <thead>
-                    <tr class="text-center">
-                      <th>ID</th>
-                      <th>Correo</th>
-                      <th>Nombres</th>
-                      <th>Apellidos</th>
-                      <th>Cargo</th>
-                      <th>Salario</th>
-                      <th>Acción</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="text-center">
-                      <td>183</td>
-                      <td>johndoe@mail.com</td>
-                      <td>John</td>
-                      <td>Doe</td>
-                      <td>Gerente</td>
-                      <td>$1.500.000</td>
-                      <td>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default">
-                              <i class="fas fa-eye"></i>
-                            </button>
-                            <button type="button" class="btn btn-default">
-                              <i class="fas fa-edit"></i>
-                            </button>
-                            <button type="button" class="btn btn-default">
-                              <i class="fas fa-trash"></i>
-                            </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="text-center">
-                        <td>185</td>
-                        <td>mariajerez@mail.com</td>
-                        <td>María</td>
-                        <td>Jeréz</td>
-                        <td>Desarrollador</td>
-                        <td>$2.500.000</td>
-                        <td>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default">
-                                  <i class="fas fa-eye"></i>
-                                </button>
-                                <button type="button" class="btn btn-default">
-                                  <i class="fas fa-edit"></i>
-                                </button>
-                                <button type="button" class="btn btn-default">
-                                  <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="text-center">
-                        <td>196</td>
-                        <td>alaciavelasquez@mail.com</td>
-                        <td>Alicia</td>
-                        <td>Velásquez</td>
-                        <td>Administrador</td>
-                        <td>$3.500.000</td>
-                        <td>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default">
-                                  <i class="fas fa-eye"></i>
-                                </button>
-                                <button type="button" class="btn btn-default">
-                                  <i class="fas fa-edit"></i>
-                                </button>
-                                <button type="button" class="btn btn-default">
-                                  <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="text-center">
-                        <td>200</td>
-                        <td>carlosvaca@mail.com</td>
-                        <td>Carlos</td>
-                        <td>Vaca</td>
-                        <td>Escritor</td>
-                        <td>$500.000</td>
-                        <td>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default">
-                                  <i class="fas fa-eye"></i>
-                                </button>
-                                <button type="button" class="btn btn-default">
-                                  <i class="fas fa-edit"></i>
-                                </button>
-                                <button type="button" class="btn btn-default">
-                                  <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                  </tbody>
-                </table>
+
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Volver</button>
               </div>
-            </div>
+            </form>
           </div>
+
         </div>
       </div>
+
     </section>
   </div>
+
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.1.0
