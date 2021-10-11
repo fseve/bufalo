@@ -1,0 +1,13 @@
+Se utilizó una plantilla gratuita por recomendación del profesor encargado.
+
+Las páginas se llaman: 
+
+dashboard.html
+login-v2.html
+perfil-usuario.html
+crear-usuario.html
+editar-usuario.html
+eliminar-usuario.html
+generar-retroalimentacion-usuario.html
+ver-listar-usuarios.html
+ver-usuario.html
